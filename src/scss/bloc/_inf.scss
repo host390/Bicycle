@@ -1,0 +1,134 @@
+
+
+.inf {
+
+    &__box {
+        display: flex;
+        min-height: 600px;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    &__bigimg {
+        flex: 0 1 66.666%;
+        background: url('../img/inf/bigimg_1.jpg') center/cover no-repeat scroll;
+        
+        img {
+            max-width: 100%;
+            display: none;
+            @media (max-width: 992px) {
+                display: block;
+            }
+        }
+        &_2 {
+            background: url('../img/inf/bigimg_2.jpg') center/cover no-repeat scroll;
+            @media (max-width: 992px) {
+                order: 1;
+            }
+        }
+    }
+
+    &__wrapper {
+        flex: 0 1 33.333%;
+        
+        @media (max-width: 992px) {
+            order: 2;
+        }
+    }
+
+    &__textbox {
+    }
+
+    &__lowimg {
+        img {
+            width: 100%;
+        }
+        &_order {
+            @media (max-width: 992px) {
+                order: 1;
+            }
+            
+        }
+        
+    }
+
+    &__regimg {
+        background: url('../img/inf/reg_1.jpg') center/cover no-repeat scroll;
+        flex: 0 1 33.333%;
+        
+        img {
+            display: none;
+            max-width: 100%;
+            @media (max-width: 992px) {
+                display: block;
+            }
+        }
+        &_2 {
+            background: url('../img/inf/reg_2.jpg') center/cover no-repeat scroll;
+            
+            @media (max-width: 992px) {
+                display: flex;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.textbox {
+    text-align: center;
+    position: relative;
+    &::after {  
+        content: '';
+        width: 22px;
+        height: 11px;
+        // background-color: red;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        border: 19px solid transparent; 
+        border-top: 21px solid #fff;
+    } 
+    &__logo {
+        margin: 60px 0px 31px 0px;
+    }
+
+    &__title {
+        margin-bottom: 26px;
+        
+    }
+
+    &__text {
+        color: #848789;
+        font-size: 16px;
+        padding: 0px 68px 95px 68px;
+        line-height: 30px;
+        position: relative;
+        &::after {  
+            content: '';
+            width: 51px;
+            height: 1px;
+            background-color: #353738;
+            bottom: 65px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+        } 
+        @media (max-width: 992px) {
+            padding: 0px 30px 90px 30px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+            padding: 0px 15px 90px 15px;
+        }
+    }
+}

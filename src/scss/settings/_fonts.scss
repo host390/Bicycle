@@ -1,0 +1,27 @@
+
+
+// font-display ??????
+
+/*
+    thin - 100
+    UltraLite - 200 
+    lite - 300
+    normal - 400 
+    medium - 500 
+    semibold - 600 
+    Bold - 700 
+    Heavy - 800 
+    Black - 900 
+*/
+
+@font-face {
+    font-family: 'Myriad';
+    src: local('MyriadPro-Regular'),
+        url('../fonts/2') format('woff2'),
+        url('../fonts/') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+

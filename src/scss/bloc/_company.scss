@@ -1,0 +1,130 @@
+
+
+
+.company {
+    &__row {
+        display: flex;
+    }
+    &__column {
+        flex: 1 1 66.667%;
+        order: 1;
+        &_t {
+            flex: 1 1 33.333%;
+        }
+        &_r {
+            flex: 1 1 33.333%;
+        }
+        &_rev {
+            order: 2;
+        }
+    }
+    &__item {
+    }
+    &__content {
+        position: relative;
+        text-align: center;
+        padding: 70px 67px 54px 67px;
+        &::after {  
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #fff;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        } 
+    }
+    &__image {
+        padding: 0 0 37.51% 0;
+    }
+    @media (max-width: 1500px) {
+        &__content {
+            padding: 60px 50px 40px 50px;
+        }
+    }
+    @media (max-width: 1100px) {
+        &__row {
+            flex-direction: column;
+            &_last {
+                .company__column {
+                    @media (max-width: 1100px) { 
+                        &:nth-child(1) {
+                            order: 2;
+                        }
+                        &:nth-child(2) {
+                            order: 1;
+                        }
+                        &:nth-child(3) {
+                            order: 3;
+                        }    
+                    }
+                }
+            }
+        }
+    }
+
+}
+.bloc {
+    &__text {
+        &_j {
+            text-align: justify;
+            line-height: 30px;
+            font-size: 16px;
+            &::after {  
+                content: '';
+                width: 50px;
+                display: block;
+                margin: 30px auto 0px auto;
+                height: 1px;
+                background-color: #d7d7d7;
+            }
+        }
+    }
+    @media (max-width: 1500px) {
+        &__text {
+            &_j {
+                &::after {  
+                    margin: 25px auto 0px auto;
+                }
+            }
+        }
+    }
+}
+.item {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    &__logo {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        background-color: rgba(110, 178, 149, 0.6);
+        transition: all 0.3s ease;
+    }
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    &:hover {
+        .item__logo {
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+    }
+    @media (max-width: 1100px) {
+        padding: 0px 0px 50% 0px;
+        height: auto;
+    }
+}

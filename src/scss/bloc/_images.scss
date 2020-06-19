@@ -1,0 +1,52 @@
+
+
+.images {
+    &__row {
+        display: flex;
+    }
+
+    &__column {
+        flex: 0 1 33.333%;
+    }
+
+    &__top {
+        display: flex;
+    }
+
+    &__img {
+        flex: 0 1 50%;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__buttom {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__center {
+        height: 100%;
+        display: flex;
+        div {
+            flex: 1 1 50%;
+        }
+    }
+
+    &__big {
+        height: 100%;
+        &_1 {
+            background: url('../img/images/big_1.jpg') center/cover no-repeat scroll;
+        }
+        &_4 {
+            background: url('../img/images/big_4.jpg') center/cover no-repeat scroll;
+        }
+        &_2 {
+            background: url('../img/images/big_2.jpg') center/cover no-repeat scroll;
+        }
+        &_3 {
+            background: url('../img/images/big_3.jpg') center/cover no-repeat scroll;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+
+
+
+
+.shop {
+    &__top {
+        display: flex;
+    }
+    &__column {
+        flex: 1 1 16.666%;
+        &_big {
+            flex: 1 1 33.333%;
+        }
+    }
+    &__bloc {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    //Кнопка
+    &__bottom {
+        background-color: #282f35;
+        padding: 75px 0px;
+        text-align: center;
+    }
+    &__button {
+        color: #ffffff;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2.8px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background-color: transparent;
+        line-height: 48px;
+        padding: 0px 60px;
+        height: 50px;
+        display: inline-block;
+        // margin: 0px auto 0px auto;
+        &:hover {
+            background-color: #fff;
+            color: #282f35;
+        } 
+    }
+
+    @media (max-width: 800px) {
+        &__top {
+            flex-wrap: wrap;
+        }
+        &__column {
+            flex: 0 1 50%;
+            &_big {
+                flex: 0 1 75%;
+            }
+            &_mid {
+                flex: 0 1 25%;
+            }
+        }
+        &__bottom {
+            padding: 50px 0px;
+        }
+        &__button {
+            padding: 0px 40px;
+        }
+    }
+}
+.bloc-shop {
+    &__head {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        &_mid {
+            height: 100%;
+        }
+        &_last {
+            order: 2;
+        }
+    }
+
+    &__item {
+        height: 100%;
+        &_b {
+            padding: 0px 0px 200.1% 0px;
+        }
+    }
+
+    &__body {
+        width: 100%;
+        height: 50%;
+        &_last {
+            order: 1;
+        }
+    }
+}
+.item {
+    &__logo {
+        flex-direction: column;
+        span {
+            text-align: center;
+            margin-top: 14px;
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.8px;
+            line-height: 17px;
+        }
+    }
+}
+

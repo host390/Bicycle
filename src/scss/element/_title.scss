@@ -1,0 +1,19 @@
+
+
+.title {
+    color: #353738;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+
+    @media (max-width: 768px) {
+        font-size: 17px;
+        
+    }
+
+    @media (max-width: 576px) {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
